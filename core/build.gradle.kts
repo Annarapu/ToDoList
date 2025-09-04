@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
+    kotlin("kapt") // For annotation processing with Hilt
+    alias(libs.plugins.hilt.android.gradlePlugin)
 }
 
 android {
@@ -27,13 +29,12 @@ android {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
-    kotlinOptions {
-        jvmTarget = "11"
-    }
 }
 
 dependencies {
-
+    implementation(libs.bundles.hilt)
+    implementation(libs.bundles.room)
+    kapt(libs.bundles.compilers)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
