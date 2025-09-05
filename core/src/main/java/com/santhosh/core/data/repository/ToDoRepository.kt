@@ -5,5 +5,5 @@ import kotlinx.coroutines.flow.Flow
 
 interface ToDoRepository {
     fun observeToDos(): Flow<List<ToDo>>
-    suspend fun addToDo(title: String, description: String?)
+    suspend fun addToDo(toDo: ToDo)
 }

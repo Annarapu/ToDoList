@@ -21,11 +21,11 @@ class ToDoRepositoryImpl @Inject constructor(private val dao: ToDoDao) : ToDoRep
             }
     }
 
-    override suspend fun addToDo(title: String, description: String?) {
+    override suspend fun addToDo(toDo: ToDo) {
         dao.insert(
             ToDoEntity(
-                title = title,
-                description = description
+                title = toDo.title,
+                description = toDo.description
             )
         )
     }
