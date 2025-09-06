@@ -23,3 +23,7 @@ This project demonstrates MVVM, state management with Kotlin Flows, navigation w
 - **Coroutines + Flow**  
 - **Navigation Compose**  
 - **Material3 Components** 
+
+## 🧪 Testing
+
+This project includes unit tests for both the `MainToDoViewModel` and `AddToDoViewModel`.
